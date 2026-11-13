@@ -1,0 +1,9 @@
+mixin work-card(work)
+  article.work-card
+    img.work-card__img(src=`/assets/images/${work.image}.png` alt=work.alt loading="lazy")
+    .work-card__overlay
+      button.work-card__btn-plus(aria-label="Add to selection")
+        
+      h3.work-card__title= work.title
+      span.work-card__divider
+      p.work-card__category= work.category

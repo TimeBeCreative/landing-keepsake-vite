@@ -1,0 +1,19 @@
+include ../../data/works.pug
+
+section.works#works
+  .container
+    h2.section-title.section-title--dark Our awesome works
+    
+    //- Фільтр (чипси)
+    .works__filter
+      each cat, index in categories
+        input.works__radio(type="radio" name="works-filter" id=`filter-${index}` value=cat checked=(index === 0))
+        label.works__chip(for=`filter-${index}`)= cat
+        
+    //- Сітка карток
+    ul.works__grid
+      each work in works
+        li.works__item(data-category=work.category)
+          +work-card(work)
+          
+    button.btn.btn--secondary Load more works
