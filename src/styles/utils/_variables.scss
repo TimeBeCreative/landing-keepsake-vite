@@ -1,40 +1,12 @@
-$color-primary-darker: #2d2d2d;
-$color-primary-dark: #7c7575;
-$color-primary: #999;
-$color-primary-light: #e6e6e6;
-$color-primary-lighter: #fafafa;
-
-$text-color: #333;
-$font-main: 'Inter', system-ui, sans-serif;
-
-$grid-breakpoints: (
-        xs: 0,
-        sm: 544px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1600px
-);
-
-$grid-columns: 12;
-$grid-fluid: false;
-$grid-gutter-widths: (
-        down sm: 40px,
-        up md: 30px,
-);
-
-$container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px
-);
-
-$border-radius: 5px;
-
-:root {
-  --font-main: #{$font-main};
-  --color-primary: #{$color-primary};
-  --color-secondary: #{$color-primary-light};
-  --text-color: #{$text-color};
-}
+@use 'sass:map';
+// Дизайн-токени кольорів з 7-ї лабораторної
+$colors: ( 'accent': #F95858, 'accent-hover': #E44646, 'teal': #2CD5C4, 'text-dark': #3A3A3C, 'text': #666A6E, 'muted': #9AA0A6, 'bg-light': #F0F3F4, 'border': #E1E5E8, 'footer': #2A2A2D, 'overlay': rgba(30, 32, 36, 0.82));
+// Брейкпоінти для адаптиву
+$breakpoints: ( 'md': 768px, 'lg': 1280px);
+// Шрифти
+$font-oswald: 'Oswald',
+sans-serif;
+$font-opensans: 'Open Sans',
+sans-serif;
+$font-dancing: 'Dancing Script',
+cursive;

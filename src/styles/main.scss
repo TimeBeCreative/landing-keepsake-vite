@@ -1,0 +1,14 @@
+// 1. Підключаємо утиліти (змінні, міксини, функції)
+@use './utils' as *;
+// 2. Генеруємо CSS custom properties у :root з мапи кольорів
+:root {
+    @each $key,
+    $value in $colors {
+        --color-#{$key}: #{$value};
+    }
+}
+
+// 3. Базові налаштування (якщо вони у тебе є в base/_reset.scss тощо)
+@use './base';
+@use './layout';
+@use './components';
