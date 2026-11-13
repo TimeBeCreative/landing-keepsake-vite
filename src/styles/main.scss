@@ -10,6 +10,7 @@
 @use './components/work-card';
 @use './components/hero';
 @use './components/services';
+@use './components/statistics';
 
 // 2. Блок :root і генерація змінних йдуть ПІСЛЯ всіх @use
 :root {
