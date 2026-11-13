@@ -12,6 +12,7 @@
 @use './components/services';
 @use './components/statistics';
 @use './components/clients';
+@use './components/journal';
 
 // 2. Блок :root і генерація змінних йдуть ПІСЛЯ всіх @use
 :root {
