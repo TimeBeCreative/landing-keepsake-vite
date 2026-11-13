@@ -1,0 +1,87 @@
+@use '../utils' as *;
+
+.cta-banner {
+  text-align: center;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 56px;
+
+  &__title {
+    font-family: $font-oswald;
+    font-weight: 300;
+    font-size: rem(22);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-dark);
+    margin-bottom: 24px;
+
+    @include mq('md') {
+      font-size: rem(28);
+    }
+  }
+}
+
+.services {
+  padding-bottom: 60px;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__desc {
+    font-family: $font-opensans;
+    font-size: rem(14);
+    color: var(--color-text);
+    max-width: 600px;
+    margin-top: 12px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    @include mq('md') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('lg') {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+  }
+}
+
+.service-card {
+  text-align: center;
+  padding: 24px 16px;
+
+  &__icon-wrap {
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--color-accent);
+    font-size: rem(24);
+  }
+
+  &__title {
+    font-family: $font-oswald;
+    font-size: rem(16);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-family: $font-opensans;
+    font-size: rem(13);
+    color: var(--color-text);
+    line-height: 20px;
+  }
+}
