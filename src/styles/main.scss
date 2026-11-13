@@ -7,6 +7,7 @@
 @use './components/button';
 @use './components/header';
 @use './components/footer';
+@use './components/work-card';
 // 2. Блок :root і генерація змінних йдуть ПІСЛЯ всіх @use
 :root {
     @each $key,
