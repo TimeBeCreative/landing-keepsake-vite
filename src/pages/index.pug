@@ -3,5 +3,8 @@ extends ../layouts/main.pug
 block title
   title Keepsake | Design Agency
 
+block append meta
+  meta(name="description" content="Адаптивний лендінг дизайн-агенції Keepsake")
+
 block content
-  h1 13.11.2026 на Землю спустився НЛО, заворожуючи дев'яту лабораторну
+  include ../components/sections/hero.pug
