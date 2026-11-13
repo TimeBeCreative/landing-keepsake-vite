@@ -1,0 +1,72 @@
+@use '../utils' as *;
+
+.hero {
+  background-color: var(--color-bg-light);
+  padding: 56px 0;
+
+  @include mq('md') {
+    padding: 72px 0;
+  }
+
+  @include mq('lg') {
+    padding: 90px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__content {
+    max-width: 700px;
+  }
+
+  &__title {
+    font-family: $font-oswald;
+    font-weight: 300;
+    font-size: rem(26);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.25;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+
+    @include mq('md') {
+      font-size: rem(32);
+    }
+
+    @include mq('lg') {
+      font-size: rem(41);
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-opensans;
+    font-size: rem(14);
+    color: var(--color-text);
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
+    @include mq('md') {
+      flex-direction: row;
+      width: auto;
+    }
+
+    // Змушуємо кнопки на мобайлі займати всю ширину, якщо потрібно
+    .btn {
+      width: 100%;
+
+      @include mq('md') {
+        width: auto;
+      }
+    }
+  }
+}

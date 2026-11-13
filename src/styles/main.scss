@@ -8,10 +8,11 @@
 @use './components/header';
 @use './components/footer';
 @use './components/work-card';
+@use './components/hero';
+
 // 2. Блок :root і генерація змінних йдуть ПІСЛЯ всіх @use
 :root {
-    @each $key,
-    $value in $colors {
-        --color-#{$key}: #{$value};
-    }
+  @each $key, $value in $colors {
+    --color-#{$key}: #{$value};
+  }
 }
