@@ -13,7 +13,8 @@ header.header
             a.nav__link(href=item.link class={'nav__link--active': item.active})= item.title
     
     .header__actions
-      button.btn-favourites(aria-label="Favourites")
+      +btn('', '#')(class="btn-favourites" aria-label="Favourites")
+        +icon('heart')
        
       button.burger(aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu")
         span.burger__line
