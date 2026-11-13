@@ -1,0 +1,42 @@
+footer#contact.footer
+  .container.footer__container
+    .footer__col
+      ul.footer__nav-list
+        li: a.footer__nav-link(href='#') About us
+        li: a.footer__nav-link(href='#works') Our works
+        li: a.footer__nav-link(href='#journal') Journal
+        li: a.footer__nav-link(href='#') Careers
+        li: a.footer__nav-link(href='#contact') Contact
+
+    .footer__col
+      ul.footer__services-list
+        li: span.footer__service-title Services
+        li: a.footer__service-link(href='#') Web design
+        li: a.footer__service-link(href='#') Motion video
+        li: a.footer__service-link(href='#') Print design
+        li: a.footer__service-link(href='#') Illustration
+        li: a.footer__service-link(href='#') Branding & copy
+
+    .footer__col.footer__col--newsletter
+      h3.footer__newsletter-title Newsletter
+      p.footer__newsletter-desc Get latest studies & design insights from us.
+      form.footer__form(onsubmit='return false;')
+        input.footer__input(
+          type='email',
+          placeholder='Your email address',
+          required
+        )
+        button.footer__submit-btn(type='submit', aria-label='Subscribe') ➔
+      label.footer__checkbox-label
+        input.footer__checkbox(type='checkbox', required)
+        span I agree to the privacy policy
+
+  .container.footer__bottom
+    p.footer__copyright © 2026 Keepsake. All rights reserved.
+    .footer__socials
+      a.footer__social-link(href='#', aria-label='Youtube') YT
+      a.footer__social-link(href='#', aria-label='Facebook') FB
+      a.footer__social-link(href='#', aria-label='Twitter') TW
+      a.footer__social-link(href='#', aria-label='Instagram') IG
+      a.footer__social-link(href='#', aria-label='LinkedIn') IN
+      a.footer__social-link(href='#', aria-label='Dribbble') DR

@@ -1,24 +1,35 @@
+include ../mixins/btn.pug
+include ../mixins/icon.pug
+include ../mixins/picture.pug
+include ../mixins/work-card.pug
+
 doctype html
-html(lang="en")
+html(lang='en')
   head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     block meta
     block title
       title Keepsake
     block styles
-      link(rel="stylesheet" href="/src/styles/main.scss")
-    include ../mixins/work-card.pug  
+      link(rel='stylesheet', href='/src/styles/main.scss')
+
   body
-    include ../mixins/work-card.pug
-    include ../mixins/btn.pug
-    include ../mixins/icon.pug
-    include ../mixins/picture.pug
     include ../includes/header.pug
 
     main
       block content
-        
+
     include ../includes/footer.pug
-    
+
     block scripts
+      script.
+        document.addEventListener('DOMContentLoaded', () => {
+          const burger = document.getElementById('burger-btn');
+          const nav = document.querySelector('.nav');
+          if (burger && nav) {
+            burger.addEventListener('click', () => {
+              nav.classList.toggle('nav--open');
+            });
+          }
+        });
