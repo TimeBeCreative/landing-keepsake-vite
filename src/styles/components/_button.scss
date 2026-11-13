@@ -1,0 +1,42 @@
+@use '../utils' as *;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-family: $font-oswald;
+    font-size: rem(13);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: var(--color-accent-hover);
+    }
+    &--secondary {
+        background-color: transparent;
+        border: 1px solid var(--color-border);
+        color: var(--color-text-dark);
+        &:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+    }
+}
+
+// Кнопка "У вибране" з серцем у шапці
+.btn-favourites {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: var(--color-border);
+    }
+}

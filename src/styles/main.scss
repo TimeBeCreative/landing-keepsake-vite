@@ -1,14 +1,16 @@
-// 1. Підключаємо утиліти (змінні, міксини, функції)
+// 1. УСІ правила @use обов'язково на самісінькому верху!
 @use './utils' as *;
-// 2. Генеруємо CSS custom properties у :root з мапи кольорів
+@use './base/reset';
+@use './base/typography';
+@use './layout/grid';
+@use './layout/sections';
+@use './components/button';
+@use './components/header';
+@use './components/footer';
+// 2. Блок :root і генерація змінних йдуть ПІСЛЯ всіх @use
 :root {
     @each $key,
     $value in $colors {
         --color-#{$key}: #{$value};
     }
 }
-
-// 3. Базові налаштування (якщо вони у тебе є в base/_reset.scss тощо)
-@use './base';
-@use './layout';
-@use './components';
