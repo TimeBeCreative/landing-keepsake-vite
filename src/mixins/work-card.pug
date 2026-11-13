@@ -1,6 +1,6 @@
 mixin work-card(work)
   article.work-card
-    img.work-card__img(src="/src/assets/images/" + work.image + ".png" alt=work.alt loading="lazy")
+    +picture(work.image, work.alt, '800', '632', true)
     .work-card__overlay
       button.work-card__btn-plus(aria-label="Add to selection")
         +icon('plus')

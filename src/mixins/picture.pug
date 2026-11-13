@@ -1,0 +1,11 @@
+mixin picture(imageName, altText, width, height, isLazy = true)
+  picture.picture
+    //- Коли згенеруємо AVIF та WebP, повернемо їх сюди. А поки що показуємо базовий png:
+    img.picture__img(
+      src=`/src/assets/images/${imageName}.png` 
+      alt=altText 
+      width=width 
+      height=height 
+      loading=(isLazy ? "lazy" : "eager")
+      decoding="async"
+    )
