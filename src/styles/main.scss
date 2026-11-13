@@ -11,6 +11,7 @@
 @use './components/hero';
 @use './components/services';
 @use './components/statistics';
+@use './components/clients';
 
 // 2. Блок :root і генерація змінних йдуть ПІСЛЯ всіх @use
 :root {
