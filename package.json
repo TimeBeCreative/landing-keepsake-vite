@@ -8,10 +8,16 @@
         "build": "vite build",
         "preview": "vite preview"
     },
+    "browserslist": [
+        "last 2 versions",
+        "> 1%",
+        "not dead"
+    ],
     "devDependencies": {
-        "vite": "8.3.3",
-        "vituum": "^1.2.0",
         "@vituum/vite-plugin-pug": "^1.1.0",
-        "sass": "^1"
+        "autoprefixer": "^10.6.2",
+        "sass": "^1",
+        "vite": "8.3.3",
+        "vituum": "^1.2.0"
     }
 }
