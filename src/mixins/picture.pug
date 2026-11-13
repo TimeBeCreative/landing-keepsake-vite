@@ -1,11 +1,20 @@
 mixin picture(imageName, altText, width, height, isLazy = true)
   picture.picture
-    //- Коли згенеруємо AVIF та WebP, повернемо їх сюди. А поки що показуємо базовий png:
+    source(
+      type='image/avif',
+      srcset=`/src/assets/images/${imageName}-400.avif 400w, /src/assets/images/${imageName}-800.avif 800w`,
+      sizes='(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw'
+    )
+    source(
+      type='image/webp',
+      srcset=`/src/assets/images/${imageName}-400.webp 400w, /src/assets/images/${imageName}-800.webp 800w`,
+      sizes='(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw'
+    )
     img.picture__img(
-      src=`/src/assets/images/${imageName}.png` 
-      alt=altText 
-      width=width 
-      height=height 
-      loading=(isLazy ? "lazy" : "eager")
-      decoding="async"
+      src=`/src/assets/images/${imageName}-800.jpg`,
+      alt=altText,
+      width=width,
+      height=height,
+      loading=isLazy ? 'lazy' : 'eager',
+      decoding='async'
     )
